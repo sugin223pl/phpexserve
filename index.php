@@ -21,6 +21,7 @@ $router->get('/', function() use ($router) {
 });
 
 $router->get('/test/{url}', TestController::class);
+$router->get('/speedtest', [TestController::class, "speedtest"]);
 $router->get('/loop/{url}', LoopController::class);
 $router->get('/email/{url}', EmailController::class);
 $router->get('/update', UpdateController::class);

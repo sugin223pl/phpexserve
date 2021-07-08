@@ -21,4 +21,17 @@ class TestController {
         }
         
     }
+
+    public static function speedtest() {
+        $time_start = microtime(true);
+        $num = 0;
+        
+        for( $i = 0; $i < 100000000; $i += 1 ) {
+            $num += 10;
+        }
+        $time_end = microtime(true);
+        $time = $time_end - $time_start;
+        
+        return $time;
+    }
 }
